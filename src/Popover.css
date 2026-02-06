@@ -1,0 +1,38 @@
+.popover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.popover-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.popover-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+
+/* Hidden measurement pass — invisible but still laid out */
+.popover-measure {
+  visibility: hidden;
+  position: absolute;
+  padding: 12px;
+  white-space: nowrap;
+}
