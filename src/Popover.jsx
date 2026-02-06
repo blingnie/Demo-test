@@ -86,11 +86,11 @@ export default function Popover({
   const bgFill = isDark ? 'rgba(43,47,51,0.7)' : 'rgba(250,251,252,0.7)'
 
   const shadow1 = isDark
-    ? { dy: 8, std: 12, color: 'rgba(0,0,0,0.20)' }
-    : { dy: 6, std: 10, color: 'rgba(0,0,0,0.06)' }
+    ? { dy: 10, std: 14, color: 'rgba(0,0,0,0.26)' }
+    : { dy: 8, std: 12, color: 'rgba(0,0,0,0.10)' }
   const shadow2 = isDark
-    ? { dy: 0, std: 4, color: 'rgba(0,0,0,0.08)' }
-    : { dy: 0, std: 2, color: 'rgba(0,0,0,0.04)' }
+    ? { dy: 0, std: 6, color: 'rgba(0,0,0,0.12)' }
+    : { dy: 0, std: 4, color: 'rgba(0,0,0,0.06)' }
 
   const strokeColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(255,255,255,0.5)'
 
@@ -104,7 +104,7 @@ export default function Popover({
 
   return (
     <div
-      className={`popover-wrapper ${className}`}
+      className={`popover-wrapper popover-animate popover-animate-${placement} ${className}`}
       style={{ width: svgWidth, height: svgHeight, ...style }}
     >
       {/* Backdrop blur — before SVG so it doesn't sample the shadow */}
